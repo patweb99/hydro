@@ -1,0 +1,88 @@
+{
+  "apps" : [{
+    "name"        : "Pump",
+    "script"      : "./components/relay.py",
+    "args"        : ["--pin=3","--sched=05:00,05:01"],
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    },
+    "env_staging" : {
+       "NODE_ENV" : "staging",
+       "TEST"     : true
+    }
+  },
+  {
+    "name"        : "Lamp",
+    "script"      : "./components/relay.py",
+    "args"        : ["--pin=2","--sched=06:00,20:00"],
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    },
+    "env_staging" : {
+       "NODE_ENV" : "staging",
+       "TEST"     : true
+    }
+  },
+  {
+    "name"        : "Camera",
+    "script"      : "./components/camera.py",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    },
+    "env_staging" : {
+       "NODE_ENV" : "staging",
+       "TEST"     : true
+    }
+  },
+  {
+    "name"        : "Raspberry Pi",
+    "script"      : "./components/pi.py",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    },
+    "env_staging" : {
+       "NODE_ENV" : "staging",
+       "TEST"     : true
+    }
+  },
+  {
+    "name"        : "Button Pump",
+    "script"      : "./components/button_pump.py",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    },
+    "env_staging" : {
+       "NODE_ENV" : "staging",
+       "TEST"     : true
+    }
+  },
+  {
+    "name"        : "Temperature",
+    "script"      : "./components/temp.py",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    },
+    "env_staging" : {
+       "NODE_ENV" : "staging",
+       "TEST"     : true
+    }
+  }]
+}
